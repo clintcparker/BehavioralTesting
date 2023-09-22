@@ -3,16 +3,17 @@
 {
 	"name": "C# (.NET)",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/dotnet:6.0",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:0-7.0",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers/features/dotnet:2": {},
+		"ghcr.io/devcontainers/features/dotnet:2": {
+			"version": "6.0"
+		},
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {}
 	},
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [5000, 5001],
@@ -30,8 +31,10 @@
 
         "vscode": {
             "extensions": [
-				"formulahendry.dotnet-test-explorer",
+				"ms-dotnettools.vscode-dotnet-runtime",
+				"ms-dotnettools.csharp",
 				"ms-dotnettools.csdevkit",
+				"formulahendry.dotnet-test-explorer",
 				"ryanluker.vscode-coverage-gutters",
 				"GitHub.copilot",
 				"ms-dotnettools.vscodeintellicode-csharp",
