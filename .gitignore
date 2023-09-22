@@ -212,3 +212,4 @@ out/
 # draw.io files
 *.drawio.bkp
 *.drawio.dtmp
+SimpleOrderingSystem.Tests/lcov.info
